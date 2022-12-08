@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  list-style-type: none;
+  font-family: "Lilita One", cursive;
+  transition: all ease 0.1s;
+}
+
+html {
+  --bgcolor: rgb(15, 15, 15);
+  background-color: var(--bgcolor);
+  scroll-behavior: smooth;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.header-nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-nav #nav-main_brand {
+  text-decoration: none;
+  -webkit-animation: rotate-smile;
+          animation: rotate-smile;
+}
+.header-nav .social-share {
+  position: relative;
+  text-align: right;
+  padding-bottom: 10px;
+}
+.header-nav .social-share ul {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.header-nav .social-share ul > li {
+  padding-top: 10px;
+}
+.header-nav .social-share ul > li > a {
+  display: block;
+  width: 100%;
+}
+.header-nav .social-share:hover ul {
+  display: block;
+}
+
+.bottom {
+  position: fixed;
+  width: 65%;
+  z-index: 1000;
+  background-color: var(--bgcolor);
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 800px) {
+  .bottom {
+    background-color: transparent;
+  }
+}
+.bottom ul li {
+  padding: 10px 20px;
+}
+.bottom ul a {
+  display: block;
+}
+
+main .block-text-content {
+  width: 65%;
+}
+main .block-text-content .extra-gap {
+  height: 100vh;
+}
+main .block-text-content .block-animate {
+  position: relative;
+  padding: 50px 20px;
+  background-color: var(--bgcolor);
+}
+main .block-text-content .first-block-animate {
+  height: 100vh;
+  padding: 20vh 20px;
+}
+main .block-text-content .first-block-animate > .heading {
+  font-size: 500%;
+}
+main .block-text-content .first-block-animate > .content {
+  font-size: 150%;
+}
+main .block-text-content .heading {
+  font-size: 200%;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+main .block-text-content .content span {
+  padding: 0.5px;
+}
+main .block-text-content .lets-work-together {
+  height: 80vh;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 200%;
+  background-color: var(--bgcolor);
+}
+main .block-text-content .lets-work-together p:nth-child(2),
+main .block-text-content .lets-work-together p:nth-child(3) {
+  color: rgb(167, 22, 167);
+}
+main .block-graph-content {
+  position: fixed;
+  width: 70%;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+main .block-graph-content > div {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  background-color: var(--bgcolor);
+}
+main .block-graph-content > #frame8 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  background-color: var(--bgcolor);
+  color: rgb(171, 171, 168);
+}
+main .block-graph-content > #frame8 :first-child {
+  width: 30%;
+  background-color: rgb(0, 0, 0);
+  float: left;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: inherit;
+}
+main .block-graph-content > #frame8 :nth-child(2) {
+  width: 30%;
+  background-color: rgb(8, 8, 8);
+  float: left;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: inherit;
+}
+main .block-graph-content > #frame8 :nth-child(3) {
+  width: 40%;
+  background-color: rgb(15, 15, 15);
+  float: left;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: inherit;
+}
+@media screen and (max-width: 800px) {
+  main .block-graph-content > #frame8 :nth-child(1), main .block-graph-content > #frame8 :nth-child(2) {
+    width: 100%;
+    height: 30vh;
+  }
+  main .block-graph-content > #frame8 :nth-child(3) {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main > * {
+    width: 100% !important;
+  }
+  .bottom {
+    display: none;
+    width: 100%;
+  }
+  body::after {
+    content: "hello";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  .block-graph-content {
+    z-index: -1100;
+    left: 0;
+  }
+  .block-graph-content > #frame8 {
+    height: auto;
+  }
+}
+[id|=arrow] {
+  color: rgb(226, 221, 221);
+  font-size: 200%;
+  font-weight: bolder;
+  position: fixed;
+  z-index: 3000;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 8px;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#arrow-up-scroll {
+  top: 2%;
+}
+
+#arrow-down-animate,
+#arrow-down-scroll {
+  bottom: 2%;
+}
+
+#arrow-down-animate {
+  display: block;
+  -webkit-animation: arrow 0.8s ease-in infinite;
+          animation: arrow 0.8s ease-in infinite;
+}
+
+@-webkit-keyframes arrow {
+  from {
+    bottom: 10%;
+    opacity: 1;
+  }
+  to {
+    bottom: 2%;
+    opacity: 0.1;
+  }
+}
+
+@keyframes arrow {
+  from {
+    bottom: 10%;
+    opacity: 1;
+  }
+  to {
+    bottom: 2%;
+    opacity: 0.1;
+  }
+}/*# sourceMappingURL=style.css.map */
